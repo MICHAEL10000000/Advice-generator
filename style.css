@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ///Primary */
+
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+
+/* //Neutral */
+
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+
+}
+@font-face {
+    font-family: Manrope;
+    src: url(/advice-generator-app-main/Manrope/static/Manrope-Bold.ttf);
+}
+body {
+    background: var(--Dark-Blue);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    font-family: Manrope;
+    position: relative;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+}
+.advice {
+    font-size: 2rem;
+    color: white;
+    /* margin: 1rem 0 1rem 0;
+    
+    width: 25ch; */
+}
+.mobile-divider{
+    display: none;
+}
+
+.dice {
+    position: absolute;
+    background-color: var(--Neon-Green);
+    
+    border-radius: 50%;
+
+}
+.dice:hover {
+    box-shadow: 0px 0px 10px 5px  var(--Neon-Green);
+    animation-name: rotate;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(90deg)
+    }
+    
+}
+.dice_material {
+    display: block;
+    width: 100%;
+}
+
+h5{
+    color: var(--Neon-Green);
+}
+
+
+@media screen and (min-width:360px) {
+    main{
+       padding: 2rem 1rem 4rem 1rem; 
+       width: 90%;
+    }
+    .mobile-divider{
+        display: block;
+    }
+    .desktop-divider{
+        display: none;
+    }
+    .advice{
+        margin: 1.2rem 0 1.5rem 0;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    .dice {
+        /* width: 7%;
+        */
+        padding: 1.5rem; 
+        top: 90%;
+    }
+
+}
+@media screen and (min-width:768px) {
+    main{
+       padding: 2rem 2rem 4rem 2rem; 
+       width: 70%;
+    }
+    .mobile-divider{
+        display: none;
+    }
+    .desktop-divider{
+        display: block;
+    }
+    .advice{
+        margin: 1.2rem 0 1.5rem 0;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    .dice {
+        /* width: 7%;
+        */
+        padding: 1.5rem; 
+        top: 90%;
+    }
+
+}
+@media screen and (min-width:1024px) {
+    main{
+       padding: 2rem 2rem 4rem 2rem; 
+       width: 50%;
+    }
+    .mobile-divider{
+        display: none;
+    }
+    .desktop-divider{
+        display: block;
+    }
+    .advice{
+        margin: 1.2rem 0 0.8rem 0;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    .dice {
+        /* width: 7%;
+        */
+        padding: 1.5rem; 
+        top: 90%;
+    }
+
+}
+@media screen and (min-width:1440px) {
+    main{
+       padding: 3rem 3rem 4rem 3rem; 
+       width: 50%;
+    }
+    .mobile-divider{
+        display: none;
+    }
+    .desktop-divider{
+        display: block;
+    }
+    .advice{
+        margin: 1.2rem 0 1.5rem 0;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    .dice {
+        /* width: 7%;
+        */
+        padding: 1.5rem; 
+        top: 90%;
+    }
+
+}
+
+/* @media (orientation: portrait) {
+    .dice {
+        width: 20%;
+        padding: 1.5rem;
+    }
+    .dice_material{
+        width: 100%;
+    }
+    
+} */
+/* @media screen and (max-width: 425px) {
+    .dice {
+        width: 15%;
+        padding: 1rem;
+    }
+    
+} */
+
+
+/* @media (orientation : portrait ){
+    body {
+        height: 100%;
+    }
+    main {
+        flex-shrink: 1;
+        width: 90%; 
+        padding: 4rem 2rem 4rem 2rem;
+        font-size: 5rem;
+    }
+    main>h5 {
+        font-size: 3rem;
+    }
+    .desktop-divider {
+        display: none;
+    }
+    .mobile-divider {
+        display: block;
+    }
+    .advice{
+        margin-top: 2rem;
+        font-size: 5rem;
+        width: 100%;
+    }
+} */
+/* @media screen and (max-width: 425px) {
+    body {
+        height: 100%;
+    }
+    main {
+        flex-shrink: 1;
+        width: 80%; 
+        padding: 3rem
+    }
+    .desktop-divider {
+        display: none;
+    }
+    .mobile-divider {
+        display: block;
+    }
+    .advice{
+        font-size: 2rem;
+        width: 100%;
+    }
+} */
+/* @media screen and (max-width: 375px) {
+    body{
+        width: 100%
+    }  
+    main {
+        padding: 2rem 0 2rem 0;
+        width: 90%; 
+    }
+    .advice{
+        font-size: 1.8rem;
+    }
+} */
+/* @media screen and (max-width: 320px) {
+    main {
+        padding: 2rem 0.5rem 2rem 0.5rem;
+        overflow: hidden;
+    }
+} */
